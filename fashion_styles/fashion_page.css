@@ -164,7 +164,7 @@ body {
   background-color: #fff3df;
   color: #fbb03b;
 }
-.offer-item-a {
+.offer-item-product {
   padding-left: 21px;
 }
 .offer-title {
@@ -199,7 +199,7 @@ body {
 .category-item {
   list-style: none;
 }
-.abc {
+.category-content {
   position: relative;
 }
 .category-img {
