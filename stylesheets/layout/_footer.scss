@@ -1,7 +1,7 @@
 .footer {
   @include block;
-  color: $secondary-color;
-  background-color: $primary-color;
+  color: $white;
+  background-color: $yellow;
   .footer-top {
     padding: 45px 0;
   }
@@ -11,13 +11,13 @@
     .brand-name {
       display: flex;
       gap: 20px;
-      font-size: map-get($font-size, size-8);
+      font-size: map-get($font-size, 3xl);
       align-items: center;
     }
     .brand-title {
       width: 373px;
       margin: 20px 0;
-      font-size: map-get($font-size, size-3);
+      font-size: map-get($font-size, 14px);
     }
     .contact-list {
       display: flex;
@@ -31,29 +31,29 @@
       width: 159px;
     }
     .list-title {
-      font-size: map-get($font-size, size-4);
+      font-size: map-get($font-size, lg);
     }
     .list-sub-info {
       width: 100%;
       padding: 20px 0;
     }
     .list-item-link {
-      font-size: map-get($font-size, size-3);
+      font-size: map-get($font-size, md);
     }
     .list-item-link:hover {
       color: #333333;
     }
     .list-item {
       margin-bottom: 10px;
-      font-weight: map-get($font-weight, md);
-      font-size: map-get($font-size, size-3);
+      font-weight: 400;
+      font-size: map-get($font-size, md);
     }
   }
   .copyright {
     width: 100%;
     padding: 25px 0;
-    border-top: 1px solid $secondary-color;
-    font-size: map-get($font-size, size-2);
+    border-top: 1px solid $white;
+    font-size: map-get($font-size, sm);
     text-align: center;
   } 
 }

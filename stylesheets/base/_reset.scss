@@ -1,18 +1,10 @@
-$font-stack : "Poppins", sans-serif;
-$reset-box: border-box;
-$content: relative;
-$font-reset: none;
 * {
     margin: 0;
     padding: 0;
-    box-sizing: $reset-box;
-}
-body {
-    font-family: $font-stack;
-    position: $content;
+    box-sizing: border-box;
 }
 ul,li {
-    list-style: $font-reset;
+    list-style: none;
 }
 a {
     text-decoration: none;

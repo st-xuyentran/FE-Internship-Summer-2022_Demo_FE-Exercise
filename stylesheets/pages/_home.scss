@@ -19,12 +19,12 @@
       padding-top: 222px;
       margin-left: 65px;
       padding-bottom: 24px;
-      font-size: map-get($font-size, size-9);
-      font-weight: map-get($font-weight, xxl);
-      color: $secondary-color;
+      font-size: map-get($font-size, 4xl);
+      font-weight: 700;
+      color: $white;
     }
     .banner-title-span {
-      color: $primary-color;
+      color: $yellow;
     }
     .shop-now {
       width: 195px;
@@ -32,20 +32,20 @@
       .link-shop-now {
         display: inline-flex;
         width: 100%;
-        font-size: map-get($font-size, size-7);
-        font-weight: map-get($font-weight, xxl);
-        color: $secondary-color;
+        font-size: map-get($font-size, 2xl);
+        font-weight: 700;
+        color: $white;
         justify-content: space-between;
       }
       .link-shop-span {
-        border-bottom: 2px solid $secondary-color;
-        color: $secondary-color;
+        border-bottom: 2px solid $white;
+        color: $white;
       }
       .link-shop-now i {
         padding: 11px 11px 9px 10px;
         border-radius: 50%;
-        background-color: $primary-color;
-        color: $secondary-color;
+        background-color: $yellow;
+        color: $white;
       }
     }
     .offer-list {
@@ -57,7 +57,7 @@
       margin: 0;
       padding-left: 109px;
       border-radius: 0px 70px 0px 0px;
-      background-color: $secondary-color;
+      background-color: $white;
     }
     .offer-item {
       width: 30%;
@@ -70,8 +70,8 @@
         width: 36px;
         height: 36px;
         text-align: center;
-        background-color: $fifth-color;
-        color: $primary-color;
+        background-color: $yellow-b;
+        color: $yellow;
       }
     }
     .offer-item-product {
@@ -79,13 +79,13 @@
       padding-left: 21px;
     }
     .offer-title {
-      font-size: map-get($font-size, size-3);
-      font-weight: map-get($font-weight, xxl);
-      color: $last-color;
+      font-size: map-get($font-size, sm);
+      font-weight: 700;
+      color: $gray-b;
     }
     .offer-price {
-      font-size: map-get($font-size, size-1);
-      color: $fourth-color;
+      font-size: map-get($font-size, md);
+      color: $gray-a;
     }
   }
   .section-category {
@@ -132,10 +132,10 @@
       }
     }
     .category-tilte {
-      font-size: map-get($font-size, size-7);
-      font-weight: map-get($font-weight, md);
+      font-size: map-get($font-size, 24px);
+      font-weight: 400;
       z-index: 999;
-      color: $secondary-color;
+      color: $white;
     }
     .category-img {
       position: absolute;
@@ -160,9 +160,9 @@
   .section-products {
     margin-bottom: 48px;
     .section-title {
-      font-size: map-get($font-size, size-8);
-      font-weight: map-get($font-weight, sm);
-      color: $last-color;
+      font-size: map-get($font-size, 3xl);
+      font-weight: 300;
+      color: $gray-b;
     }
     .section-heading {
       @include flex;
@@ -180,8 +180,8 @@
     }
     .product-item-link {
       display: block;
-      font-size: map-get($font-size, size-4);
-      color: $last-color;
+      font-size: map-get($font-size, lg);
+      color: $gray-b;
       .badge-danger {
         position: absolute;
         top: 30px;
@@ -191,12 +191,12 @@
     .product-item-title {
       width: 100%;
       padding: 10px 0;
-      font-size: map-get($font-size, size-4);
-      font-weight: map-get($font-weight, sm);
-      color: $last-color;
+      font-size: map-get($font-size, lg);
+      font-weight: 300;
+      color: $gray-b;
     }
     .product-befor-sale {
-      font-size: map-get($font-size, size-6);
+      font-size: map-get($font-size, xxl);
       color: #cecece;
     }
     .product-discount {
@@ -204,12 +204,12 @@
       justify-content: space-between;
     }
     .product-sale {
-      font-size: map-get($font-size, size-6);
-      color: $thirth-color;
+      font-size: map-get($font-size, xxl);
+      color: $red;
     }
     .product-price {
-      color: $last-color;
-      font-size: map-get($font-size, size-6);
+      color: $gray-b;
+      font-size: map-get($font-size, xxl);
     }
   }
   .section-reason {
@@ -220,13 +220,13 @@
     }
     .section-title {
       text-align: center;
-      font-weight: map-get($font-weight, sm);
-      font-size: map-get($font-size, size-8);
-      color: $last-color;
+      font-weight: 300;
+      font-size: map-get($font-size, 3xl);
+      color: $gray-b;
     }
     .reason-content {
-      font-weight: map-get($font-weight, md);
-      font-size: map-get($font-size, size-3);
+      font-weight: 400;
+      font-size: map-get($font-size, sm);
       color: #808080;
     }
     .reason-list {
@@ -242,8 +242,8 @@
     }
     .reason-title {
       margin: 30px 0;
-      font-size: map-get($font-size, size-3);
-      color: $last-color;
+      font-size: map-get($font-size, sm);
+      color: $gray-b;
     }
   }
   .section-form {
@@ -263,9 +263,9 @@
       padding: 65px;
     }
     .seletter-title {
-      color: $secondary-color;
-      font-size: map-get($font-size, size-7);
-      font-weight: map-get($font-weight, md);
+      color: $white;
+      font-size: map-get($font-size, 2xl);
+      font-weight: 400;
     }
     .form-user {
       @include flex;
@@ -277,7 +277,10 @@
       padding-left: 20px;
       border: none;
       border-radius: 61px;
-      background: $secondary-color;
+      background: $white;
     }
   }
 }
+
+
+//Repons
