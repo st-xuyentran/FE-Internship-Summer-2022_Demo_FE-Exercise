@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, san-serif;
+  position: relative;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  border: none;
+  background: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.btn-primary {
+  width: 175px;
+  height: 47px;
+  border-radius: 56px;
+  color: #333333;
+  background-color: #fbb03b;
+}
+
+.btn-secondary {
+  border-radius: 33px;
+  text-align: center;
+  padding: 14px;
+}
+
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.badge {
+  width: 60px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.badge-danger {
+  background-color: #ff0000;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-1 {
+  width: 8, 33%;
+}
+
+.col-2 {
+  width: 16, 67%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33, 33%;
+}
+
+.col-5 {
+  width: 41, 67%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58, 33%;
+}
+
+.col-8 {
+  width: 66, 67%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83, 33%;
+}
+
+.col-11 {
+  width: 91, 66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.header {
+  position: absolute;
+  width: 1140px;
+  top: 48px;
+  z-index: 999;
+}
+.header .nav-headr {
+  display: flex;
+  text-align: center;
+  max-width: 1152px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.header .nav-headr .header-logo {
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+}
+.header .nav-headr .header-logo .header-link {
+  padding-right: 15px;
+}
+.header .nav-headr .nav-menu-list {
+  display: flex;
+  text-align: center;
+  gap: 150px;
+}
+.header .nav-headr .nav-menu-list .nav-menu-item {
+  line-height: 40px;
+}
+.header .nav-headr .nav-menu-list .nav-menu-item .menu-link {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fbb03b;
+}
+.header .nav-headr .nav-list {
+  display: flex;
+  text-align: center;
+  gap: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */

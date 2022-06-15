@@ -1,0 +1,26 @@
+
+
+.btn{
+    border: $font-reset;
+    background: $font-reset;
+    font-size: map-get($font-size , xs );
+    font-weight: map-get($font-weight , xxl );
+}
+.btn-primary {
+    width: 175px;
+    height: 47px;
+    border-radius: 56px;
+    color: $last-color;
+    background-color: $primary-color;
+}
+.btn-secondary {
+    border-radius: 33px;
+    text-align: center;
+    padding: 14px;
+}
+.btn-icon {
+    width: 36px;
+    height: 36px;
+    font-size: map-get($font-size, sm );
+    color: $secondary-color;
+}

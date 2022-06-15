@@ -1,0 +1,36 @@
+.header{
+    position: absolute;
+    width: 1140px;
+    top: 48px;
+    z-index: 999;
+    .nav-headr{
+        @include flex;
+        max-width: 1152px;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+        .header-logo{
+            @include flex;
+            font-size: map-get($font-size , sm );
+            .header-link{
+                padding-right: 15px;
+            }
+        }
+        .nav-menu-list{
+            @include flex;
+            gap: 150px;
+            .nav-menu-item {
+                line-height: 40px;
+                .menu-link{
+                    font-size: map-get($font-size, sm );
+                    font-weight: map-get($font-weight, xxl );
+                    color: $primary-color;
+                }
+            }
+        }
+        .nav-list{
+            @include flex;
+            gap: 20px;
+        }
+    }
+}

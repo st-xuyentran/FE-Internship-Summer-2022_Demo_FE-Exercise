@@ -60,10 +60,9 @@ img {
 .badge-danger {
   background: #ff0000;
 }
-.badge-da {
-  margin-bottom: 14px;
-  z-index: 3;
-}
+
+
+/* header */
 .header {
   position: absolute;
   width: 1440px;

@@ -1,0 +1,9 @@
+@mixin flex {
+    display: flex;
+    text-align: center;
+}
+@mixin block {
+    display: block;
+    margin: 0 auto;
+    width: 1140px;
+}
