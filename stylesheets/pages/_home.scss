@@ -1,0 +1,283 @@
+//main
+.main-content {
+  // @include flex;
+  width: 1440px;
+  margin: 0 auto;
+  .section-banner {
+    position: relative;
+    width: 100%;
+    height: 880px;
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      ),
+      url(../fashion_styles/image/Fashion\ -\ home-image9\ 1.png);
+    background-size: cover;
+    .banner-title {
+      width: 403px;
+      padding-top: 222px;
+      margin-left: 65px;
+      padding-bottom: 24px;
+      font-size: map-get($font-size, size-9);
+      font-weight: map-get($font-weight, xxl);
+      color: $secondary-color;
+    }
+    .banner-title-span {
+      color: $primary-color;
+    }
+    .shop-now {
+      width: 195px;
+      margin-left: 65px;
+      .link-shop-now {
+        display: inline-flex;
+        width: 100%;
+        font-size: map-get($font-size, size-7);
+        font-weight: map-get($font-weight, xxl);
+        color: $secondary-color;
+        justify-content: space-between;
+      }
+      .link-shop-span {
+        border-bottom: 2px solid $secondary-color;
+        color: $secondary-color;
+      }
+      .link-shop-now i {
+        padding: 11px 11px 9px 10px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        color: $secondary-color;
+      }
+    }
+    .offer-list {
+      position: absolute;
+      justify-content: flex-end;
+      @include flex;
+      width: 1100px;
+      bottom: 0;
+      margin: 0;
+      padding-left: 109px;
+      border-radius: 0px 70px 0px 0px;
+      background-color: $secondary-color;
+    }
+    .offer-item {
+      width: 30%;
+      align-items: center;
+    }
+    .offer-item-content {
+      @include flex;
+      padding: 31px 0;
+      i {
+        width: 36px;
+        height: 36px;
+        text-align: center;
+        background-color: $fifth-color;
+        color: $primary-color;
+      }
+    }
+    .offer-item-product {
+      width: 205px;
+      padding-left: 21px;
+    }
+    .offer-title {
+      font-size: map-get($font-size, size-3);
+      font-weight: map-get($font-weight, xxl);
+      color: $last-color;
+    }
+    .offer-price {
+      font-size: map-get($font-size, size-1);
+      color: $fourth-color;
+    }
+  }
+  .section-category {
+    margin: 48px 0;
+  }
+  .category-list {
+    justify-content: space-between;
+  }
+  .category-item {
+    height: 365px;
+    .badege {
+      margin-bottom: 10px;
+      z-index: 3;
+    }
+    .first-child {
+      background-image: url(../fashion_styles/image/Fashion\ -\ home-image5\ 1.png);
+    }
+    .second-child {
+      background-image: url(../fashion_styles/image/Fashion\ -\ home-image6\ 1.png);
+    }
+    .last-child {
+      background-image: url(../fashion_styles/image/Fashion\ -\ home-image7\ 1.png);
+    }
+    .category-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      padding: 53px 40px;
+      background-size: cover;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #000000;
+        opacity: 0.5;
+      }
+    }
+    .category-tilte {
+      font-size: map-get($font-size, size-7);
+      font-weight: map-get($font-weight, md);
+      z-index: 999;
+      color: $secondary-color;
+    }
+    .category-img {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  .category-info {
+    @include flex;
+    width: 100%;
+    height: 140px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    z-index: 2;
+  }
+  //section product
+  .section-products {
+    margin-bottom: 48px;
+    .section-title {
+      font-size: map-get($font-size, size-8);
+      font-weight: map-get($font-weight, sm);
+      color: $last-color;
+    }
+    .section-heading {
+      @include flex;
+      margin-bottom: 30px;
+      justify-content: space-between;
+    }
+    .section-heading-center {
+      justify-content: center;
+      padding-top: 48px;
+    }
+    .products-list {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+    }
+    .product-item-link {
+      display: block;
+      font-size: map-get($font-size, size-4);
+      color: $last-color;
+      .badge-danger {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+      }
+    }
+    .product-item-title {
+      width: 100%;
+      padding: 10px 0;
+      font-size: map-get($font-size, size-4);
+      font-weight: map-get($font-weight, sm);
+      color: $last-color;
+    }
+    .product-befor-sale {
+      font-size: map-get($font-size, size-6);
+      color: #cecece;
+    }
+    .product-discount {
+      @include flex;
+      justify-content: space-between;
+    }
+    .product-sale {
+      font-size: map-get($font-size, size-6);
+      color: $thirth-color;
+    }
+    .product-price {
+      color: $last-color;
+      font-size: map-get($font-size, size-6);
+    }
+  }
+  .section-reason {
+    background-color: #f7f7f7;
+    .section-heading.section-heading-center {
+      justify-content: center;
+      padding: 48px 0;
+    }
+    .section-title {
+      text-align: center;
+      font-weight: map-get($font-weight, sm);
+      font-size: map-get($font-size, size-8);
+      color: $last-color;
+    }
+    .reason-content {
+      font-weight: map-get($font-weight, md);
+      font-size: map-get($font-size, size-3);
+      color: #808080;
+    }
+    .reason-list {
+      display: flex;
+      width: 100%;
+      padding-bottom: 57px;
+      justify-content: space-between;
+    }
+    .reason-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .reason-title {
+      margin: 30px 0;
+      font-size: map-get($font-size, size-3);
+      color: $last-color;
+    }
+  }
+  .section-form {
+    @include block;
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.7) 33.28%,
+        rgba(0, 0, 0, 0) 94.05%
+      ),
+      url("../fashion_styles/image/Fashion\ -\ home-image8\ 1.png");
+    .seletter {
+      @include flex;
+      align-items: center;
+    }
+    .seletter-content {
+      width: 50%;
+      padding: 65px;
+    }
+    .seletter-title {
+      color: $secondary-color;
+      font-size: map-get($font-size, size-7);
+      font-weight: map-get($font-weight, md);
+    }
+    .form-user {
+      @include flex;
+      justify-content: space-between;
+    }
+    .form-input {
+      width: 351px;
+      height: 48px;
+      padding-left: 20px;
+      border: none;
+      border-radius: 61px;
+      background: $secondary-color;
+    }
+  }
+}

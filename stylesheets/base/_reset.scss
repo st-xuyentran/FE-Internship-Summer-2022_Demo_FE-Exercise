@@ -1,4 +1,4 @@
-$font-stack: Poppins ,san-serif;
+$font-stack : "Poppins", sans-serif;
 $reset-box: border-box;
 $content: relative;
 $font-reset: none;
@@ -15,5 +15,6 @@ ul,li {
     list-style: $font-reset;
 }
 a {
-    text-decoration: $font-reset;
-}
+    text-decoration: none;
+    color: inherit;
+  }

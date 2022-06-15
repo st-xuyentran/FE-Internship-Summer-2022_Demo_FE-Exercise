@@ -2,14 +2,18 @@ $primary-color: #fbb03b;
 $secondary-color: #fff;
 $thirth-color: #ff0000;
 $fourth-color: #a8a8a8;
+$fifth-color: #fff3df;
 $last-color: #333333;
 $font-size: (
-    xs: 12px,
-    sm: 18px,
-    md: 20px,
-    lg: 24px,
-    xl: 32px,
-    xxl: 72px,
+    size-1: 12px,
+    size-2: 13px,
+    size-3: 14px,
+    size-4: 16px,
+    size-5: 18px,
+    size-6: 20px,
+    size-7: 24px,
+    size-8: 32px,
+    size-9: 72px,
 );
 $font-weight: (
     xs: 200,

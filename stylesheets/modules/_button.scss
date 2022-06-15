@@ -5,22 +5,34 @@
     background: $font-reset;
     font-size: map-get($font-size , xs );
     font-weight: map-get($font-weight , xxl );
-}
-.btn-primary {
-    width: 175px;
-    height: 47px;
-    border-radius: 56px;
-    color: $last-color;
-    background-color: $primary-color;
-}
-.btn-secondary {
-    border-radius: 33px;
-    text-align: center;
-    padding: 14px;
-}
-.btn-icon {
-    width: 36px;
-    height: 36px;
-    font-size: map-get($font-size, sm );
-    color: $secondary-color;
+    &.btn-primary {
+        width: 175px;
+        height: 47px;
+        border-radius: 56px;
+        color: $last-color;
+        background-color: $primary-color;
+    }
+    &.btn-secondary {
+        border-radius: 33px;
+        text-align: center;
+        padding: 14px;
+        background-color: $secondary-color;
+    }
+    &.btn-icon {
+        width: 36px;
+        height: 36px;
+        font-size: map-get($font-size, sm );
+        color: $secondary-color;
+    }
+    &.btn-outline-secondary {
+        width: 143px;
+        padding: 15px 0;
+        border: 1px solid #c4c4c4;
+        border-radius: 39px;
+        font-size: map-get($font-size, size-2);
+        font-weight: map-get($font-weight , xxl);
+        text-align: center;
+        color: $last-color;
+        background-color: $secondary-color;
+      }
 }

@@ -316,10 +316,6 @@ img {
 .category-tilte:hover {
   color: var(--primary-color);
 }
-.category-link:hover {
-  color: var(--primary-color);
-}
-
 /* section product */
 .section-products {
   margin-bottom: 48px;
@@ -491,11 +487,11 @@ h3.reason-title {
 .footer-top {
   padding: 45px 0;
 }
-.footer-container {
+/* .footer-container {
   display: block;
   padding: 45px 0;
   margin: 0 auto;
-}
+} */
 .footer-row {
   display: flex;
   width: 100%;
