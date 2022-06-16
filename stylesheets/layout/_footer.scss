@@ -1,7 +1,7 @@
 .footer {
-  @include block;
+  margin: 0 auto;
   color: $white;
-  background-color: $yellow;
+  background-color: $primary-color;
   .footer-top {
     padding: 45px 0;
   }

@@ -24,7 +24,7 @@
       color: $white;
     }
     .banner-title-span {
-      color: $yellow;
+      color: $primary-color;
     }
     .shop-now {
       width: 195px;
@@ -44,7 +44,7 @@
       .link-shop-now i {
         padding: 11px 11px 9px 10px;
         border-radius: 50%;
-        background-color: $yellow;
+        background-color: $primary-color;
         color: $white;
       }
     }
@@ -71,7 +71,7 @@
         height: 36px;
         text-align: center;
         background-color: $yellow-b;
-        color: $yellow;
+        color: $primary-color;
       }
     }
     .offer-item-product {
@@ -157,17 +157,17 @@
     z-index: 2;
   }
   //section product
+  .section-heading {
+    @include flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+  }
   .section-products {
     margin-bottom: 48px;
     .section-title {
       font-size: map-get($font-size, 3xl);
       font-weight: 300;
       color: $gray-b;
-    }
-    .section-heading {
-      @include flex;
-      margin-bottom: 30px;
-      justify-content: space-between;
     }
     .section-heading-center {
       justify-content: center;
@@ -212,12 +212,13 @@
       font-size: map-get($font-size, xxl);
     }
   }
+  .section-heading-center {
+    justify-content: center;
+    padding: 48px 0;
+  }
   .section-reason {
     background-color: #f7f7f7;
-    .section-heading.section-heading-center {
-      justify-content: center;
-      padding: 48px 0;
-    }
+   
     .section-title {
       text-align: center;
       font-weight: 300;
@@ -247,7 +248,7 @@
     }
   }
   .section-form {
-    @include block;
+    margin: 0 auto;
     background-image: linear-gradient(
         90deg,
         rgba(0, 0, 0, 0.7) 33.28%,
@@ -283,4 +284,121 @@
 }
 
 
-//Repons
+//Reponsive
+
+@media only screen and (max-width: 768px) {
+  .col-sm-1 {
+    width: 8, 33%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-2 {
+    width: 16, 67%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-3 {
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-4 {
+    width: 33, 33%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-5 {
+    width: 41, 67%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-6 {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-7 {
+    width: 58, 33%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-8 {
+    width: 66, 67%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-9 {
+    width: 75%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-10 {
+    width: 83, 33%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-11 {
+    width: 91, 66%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-12 {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .main-content{
+    max-width: 786px;
+    width: calc(100% - 48px);
+    height: 740px;
+    .section-banner{
+      width: 100%;
+      height: 740px;
+      background-size: cover;
+      .banner-title{
+        width: 271px;
+        font-weight: 700;
+        font-size: map-get($font-size, 5xl);
+      }
+      .shop-now{
+        width: 126px;
+        height: 32px;
+        .link-shop-span{
+          width: 78px;
+          font-size: map-get($font-size, md);
+          font-weight: 700;
+        }
+        svg{
+          width: 32px;
+          height: 32px;
+        }
+      }
+      .offer-list{
+        display: none;
+      }
+    }
+    .section-category{
+      width: 100%;
+      margin: 0 auto;
+      .category-list{
+        padding: 24px 0 48px 0;
+      }
+      .category-item{
+        margin: 8px 0;
+      }
+    }
+    .section-reason{
+      width: 100%;
+      .section-heading-center{
+        font-size: map-get($font-size, xl);
+      }
+      .reason-list{
+        display: block;
+        width: 100%;
+      }
+      .reason-item{
+        display: flex;
+      }
+    }
+  }
+}
