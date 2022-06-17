@@ -1,0 +1,44 @@
+
+
+.btn{
+    border: none;
+    background: none;
+    font-size: map-get($font-size , xs );
+    font-weight: 700;
+    &.btn-primary {
+        width: 175px;
+        height: 47px;
+        border-radius: 56px;
+        color: $gray-b;
+        background-color: $primary-color;
+    }
+    &.btn-secondary {
+        border-radius: 33px;
+        text-align: center;
+        padding: 14px;
+        background-color: $white;
+    }
+    &.btn-icon {
+        width: 36px;
+        height: 36px;
+        font-size: map-get($font-size, sm );
+        color: $white;
+    }
+    &.btn-outline-secondary {
+        width: 143px;
+        padding: 15px 0;
+        border: 1px solid #c4c4c4;
+        border-radius: 39px;
+        font-size: map-get($font-size, md);
+        font-weight: 700;
+        text-align: center;
+        color: $gray-b;
+        background-color: $white;
+      }
+      &.btn-icon-mobile{
+        color: $gray-b;
+        width: 20px;
+        height: 20px;
+
+      }
+}

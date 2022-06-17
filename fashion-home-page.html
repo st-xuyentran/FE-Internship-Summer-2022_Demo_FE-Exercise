@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="fashion_styles/fashion_page.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="fashion_styles/fashion_page.css" /> -->
+    <link rel="stylesheet" href="stylesheets/styles.css">
     <title>Home 1</title>
   </head>
   <body>
@@ -62,6 +64,9 @@
               </button>
             </li>
           </ul>
+          <div class="toggle">
+            <i class="fas fa-bars"></i>
+          </div>
         </div>
       </div>
     </header>
@@ -135,7 +140,7 @@
       <section class="section-category">
         <div class="container">
           <ul class="category-list row">
-            <li class="category-item col-6">
+            <li class="category-item col-6 col-sm-12">
               <div class="category-wrapper first-child">
                 <div class="category-info">
                   <h4 class="category-tilte">New arrivalsare now in!</h4>
@@ -143,7 +148,7 @@
                 </div>
               </div>
             </li>
-            <li class="col-3 category-item">
+            <li class="col-3 col-sm-6 category-item">
               <div class="category-wrapper second-child">
                 <div class="category-info">
                   <h4 class="category-tilte">Basic t-shirts $299</h4>
@@ -151,7 +156,7 @@
                 </div>
               </div>
             </li>
-            <li class="col-3 category-item">
+            <li class="col-3 col-sm-6 category-item">
               <div class="category-wrapper last-child">
                 <span class="badge badge-danger">-50%</span>
                 <div class="category-info">
@@ -170,7 +175,7 @@
             <a class="btn btn-outline-secondary" href="#">SHOW MORE</a>
           </div>
           <ul class="products-list row">
-            <li class="products-item col-3">
+            <li class="products-item col-sm-6 col-3">
               <a class="product-item-link" href="#">
                 <span class="badge badge-danger">-30%</span>
                 <img class="product-img" src="fashion_styles/image/image.png" alt="T-shirt Summer Vibes" />
@@ -181,21 +186,21 @@
                 </div>
               </a>
             </li>
-            <li class="products-item col-3">
+            <li class="products-item col-sm-6 col-3">
               <a class="product-item-link" href="#">
                 <img class="product-img" src="fashion_styles/image/image-2.png" alt="Loose Knit 3/4 Sleeve" />
                 <h4 class="product-item-title">Loose Knit 3/4 Sleeve</h4>
                 <span class="product-price">$119.99</span>
               </a>
             </li>
-            <li class="products-item col-3">
+            <li class="products-item col-sm-6 col-3">
               <a class="product-item-link" href="#">
                 <img class="product-img" src="fashion_styles/image/image-3.png" alt="Basic Slim Fit T-shirt" />
                 <h4 class="product-item-title">Basic Slim Fit T-shirt</h4>
                 <span class="product-price">$79.99</span>
               </a>
             </li>
-            <li class="products-item col-3">
+            <li class="products-item col-sm-6 col-3">
               <a class="product-item-link" href="#">
                 <img class="product-img" src="fashion_styles/image/image-4.png" alt="Loose Textured T-Shirt" />
                 <h4 class="product-item-title">Loose Textured T-Shirt</h4>
@@ -218,11 +223,13 @@
                 <path d="M3.72838 10.4818H10.7282C10.8607 10.4859 10.9927 10.4637 11.1163 10.4164C11.24 10.3691 11.3528 10.2978 11.448 10.2066C11.5432 10.1154 11.6189 10.0062 11.6706 9.88551C11.7223 9.76483 11.7489 9.63512 11.7489 9.50407C11.7489 9.37301 11.7223 9.2433 11.6706 9.12262C11.6189 9.00194 11.5432 8.89277 11.448 8.80157C11.3528 8.71038 11.24 8.63902 11.1163 8.59175C10.9927 8.54447 10.8607 8.52224 10.7282 8.52636H3.72838C3.59817 8.52546 3.46908 8.55014 3.3486 8.59898C3.22813 8.64782 3.11867 8.71984 3.0266 8.81085C2.93452 8.90187 2.86167 9.01006 2.81226 9.12915C2.76285 9.24824 2.73788 9.37584 2.73879 9.50455C2.74359 9.76241 2.84942 10.0084 3.034 10.1906C3.21858 10.3729 3.46751 10.4773 3.72838 10.4818Z" fill="#333333"/>
                 <path d="M9.89078 13.2649C9.89169 13.1362 9.86672 13.0086 9.81731 12.8895C9.7679 12.7704 9.69505 12.6622 9.60297 12.5711C9.5109 12.4801 9.40144 12.4081 9.28097 12.3592C9.16049 12.3104 9.0314 12.2857 8.90119 12.2866H1.86403C1.73151 12.2825 1.59951 12.3047 1.47586 12.352C1.35221 12.3993 1.23943 12.4706 1.14422 12.5619C1.049 12.6531 0.9733 12.7622 0.921601 12.8829C0.869902 13.0036 0.843262 13.1333 0.843262 13.2644C0.843262 13.3955 0.869902 13.5252 0.921601 13.6459C0.9733 13.7666 1.049 13.8758 1.14422 13.967C1.23943 14.0582 1.35221 14.1295 1.47586 14.1768C1.59951 14.2241 1.73151 14.2463 1.86403 14.2422H8.86385C8.99756 14.2502 9.13148 14.2306 9.25717 14.1848C9.38285 14.139 9.49756 14.068 9.59407 13.9761C9.69057 13.8843 9.76676 13.7737 9.81783 13.6513C9.8689 13.5288 9.89374 13.3973 9.89078 13.2649V13.2649Z" fill="#333333"/>
               </svg>                                             
-              <h4 class="reason-title">Free shipping</h4>
-              <p class="reason-content">
-                All purchases over $199 are eligible forfree shipping via USPS
-                First Class Email
-              </p>
+              <div class="reson-body">
+                <h4 class="reason-title">Free shipping</h4>
+                  <p class="reason-content">
+                    All purchases over $199 are eligible forfree shipping via USPS
+                    First Class Email
+                  </p>
+              </div>
             </li>
             <li class="reason-item col-3">
               <svg width="35" height="37" viewBox="0 0 35 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -269,7 +276,7 @@
             <h3 class="section-title">Product in today</h3>
           </div>
           <ul class="products-list row">
-            <li class="products-item col-3">
+            <li class="products-item col-sm-6 col-3">
               <a class="product-item-link" href="#">
                 <span class="badge badge-danger">-30%</span>
                 <img class="product-img" src="fashion_styles/image/image.png" alt="T-shirt Summer Vibes" />
@@ -280,21 +287,21 @@
                 </div>
               </a>
             </li>
-            <li class="products-item col-3">
+            <li class="products-item col-sm-6 col-3">
               <a class="product-item-link" href="#">
                 <img class="product-img" src="fashion_styles/image/image-2.png" alt="Loose Knit 3/4 Sleeve" />
                 <h4 class="product-item-title">Loose Knit 3/4 Sleeve</h4>
                 <span class="product-price">$119.99</span>
               </a>
             </li>
-            <li class="products-item col-3">
+            <li class="products-item col-sm-6 col-3">
               <a class="product-item-link" href="#">
                 <img class="product-img" src="fashion_styles/image/image-3.png" alt="Basic Slim Fit T-shirt" />
                 <h4 class="product-item-title">Basic Slim Fit T-shirt</h4>
                 <span class="product-price">$79.99</span>
               </a>
             </li>
-            <li class="products-item col-3">
+            <li class="products-item col-sm-6 col-3">
               <a class="product-item-link" href="#">
                 <img class="product-img" src="fashion_styles/image/image-4.png" alt="Loose Textured T-Shirt" />
                 <h4 class="product-item-title">Loose Textured T-Shirt</h4>
