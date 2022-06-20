@@ -348,7 +348,6 @@
     padding-right: 15px;
   }
   .main-content{
-    max-width: 786px;
     width: calc(100% - 48px);
     height: 740px;
     .section-banner{
@@ -398,6 +397,75 @@
       }
       .reason-item{
         display: flex;
+      }
+      .section-heading{
+        height: 589px;
+      }
+    }
+    .section-title{
+      font-size: map-get($font-size, xl);
+      font-weight: 300;
+    }
+    .product-img{
+      width: 100%;
+    }
+    .product-item-title{
+      width: 146px;
+      font-size: map-get($font-size, xs);
+      font-weight: 300;
+    }
+    .product-sale{
+      font-size: map-get($font-size, 6xl);
+    }
+    
+//////////////
+
+    .section-products {
+      .section-title {
+        font-size: map-get($font-size, xl);
+        font-weight: 300;
+        color: $gray-b;
+      }
+      .section-heading-center {
+        font-size: map-get($font-size, xl);
+        justify-content: center;
+        padding-top: 48px;
+      }
+      .product-item-link {
+        display: block;
+        font-size: map-get($font-size, xs);
+        font-weight: 300;
+        color: $gray-b;
+        .badge-danger {
+          position: absolute;
+          width: 32px;
+          font-size: map-get($font-size, 7xl);
+          top: 30px;
+          left: 30px;
+        }
+      }
+      .product-item-title {
+        width: 100%;
+        padding: 10px 0;
+        font-size: map-get($font-size, lg);
+        font-weight: 300;
+        color: $gray-b;
+      }
+      .product-befor-sale {
+        font-size: map-get($font-size, xxl);
+        color: #cecece;
+      }
+      .product-discount {
+        @include flex;
+        justify-content: space-between;
+      }
+      .product-sale {
+        font-size: map-get($font-size, xxl);
+        color: $red;
+      }
+      .product-price {
+        color: $gray-b;
+        font-size: map-get($font-size, xxl);
       }
     }
   }
