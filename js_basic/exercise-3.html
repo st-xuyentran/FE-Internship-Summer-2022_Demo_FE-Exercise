@@ -10,17 +10,16 @@
     
 </body>
 <script>
-    function countTheOccurrence(a,b){
-    var count = 0;
-    var str = a.split(" ");
-    for(var i = 0; i< str.length ;i++){
-        if(str[i] == b){
-            count++;
-        }
+    function truncateAString(string,number){
+    var newStr = "";
+    var strTemp = "";
+    if(string != ""){
+        newStr = string.split(" ");
     }
-    return count;
+    for(var i = 0;i< number ; i++){
+        strTemp+= newStr[i] + " ";
+    }
+    return strTemp;
 }
-console.log(countTheOccurrence('hello my name is xuyen helo', 'hello'))
-
 </script>
 </html>
