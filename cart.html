@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="fashion_styles/fashion_page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<style>
+  .header {
+    top: 0;
+    background-color: black;
+
+  }
+  .menu-link {
+    color: #fff;
+  }
+  .toggle {
+    display: none;
+  }
+  .main-content {
+    position: relative;
+    top: 200px;
+  }
+  .table-condensed {
+    width: 100%;
+  }
+  .table-responsive {
+    width: 100%;
+    height: 100%;
+  }
+  .table {
+    background-color: #fbb03b;
+    border: 1px solid #333;
+    color: #fff;
+  }
+  .cart_menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cart-link{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+  }
+  .cart-item {
+    width: 100%;
+    height: 200px;
+  }
+  .product-img{
+    width: 120px;
+    height: 200px;
+  }
+  .cart-item-link {
+    display: flex;
+    position: absolute;
+    height: 200px;
+    width: 25%;
+    flex-direction: column;
+  }
+  .badge {
+    height: 25px;
+  }
+  .title-cart {
+    font-size: 36px;
+    color: #333;
+    font-weight: 400;
+  }
+  .cart {
+    width: 100%;
+    height: 100%;
+  }
+  .cart-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+  }
+  .show-content-card {
+    width: 75%;
+  }
+  .cart-header {
+    width: 75%;
+    text-align: center;
+  }
+  .cart-item-product {
+    width: 100%;
+    display: flex;
+    border: 1px solid #D3D3D3;
+  }
+
+  .show-total {
+    width: 30%;
+    padding: 5px;
+    height: 213px;
+    border: 1px solid #D3D3D3;
+    background-color: #FFFFFF;
+  }
+
+  .total-product {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-light{
+    text-transform: none;
+    margin-left: 0px;
+    margin-top: 20px;
+    color: #fbb03b;
+  }
+  .btn-pay {
+    bottom: 0;
+  }
+</style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class=" nav-header">
+        <h1 class="header-logo">
+          <a class="header-link" href="#"><svg width="42" height="35" viewBox="0 0 42 35" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M19.4211 34.8203C19.1691 34.8293 18.9208 34.751 18.711 34.5963C18.5013 34.4417 18.3405 34.2184 18.2511 33.9578L15.3171 25.4457H2.421C2.10292 25.4457 1.78796 25.3764 1.49411 25.2418C1.20027 25.1072 0.933288 24.9099 0.708454 24.6612C0.48362 24.4124 0.305335 24.1172 0.183774 23.7923C0.0622137 23.4673 -0.000235823 23.1191 6.69174e-07 22.7675V2.67818C-0.000119585 2.32577 0.0627081 1.97682 0.184873 1.65131C0.307038 1.3258 0.48615 1.03014 0.711915 0.781322C0.937679 0.5325 1.20565 0.335383 1.50049 0.201308C1.79532 0.0672322 2.11121 -0.00116368 2.43001 1.4978e-05H19.3887C19.6186 4.3594e-06 19.8438 0.072296 20.0379 0.208473C20.232 0.34465 20.387 0.539099 20.4849 0.769056L24.1479 9.37464H38.7747C39.0928 9.37464 39.4077 9.44393 39.7016 9.57854C39.9954 9.71316 40.2624 9.91045 40.4873 10.1592C40.7121 10.4079 40.8904 10.7031 41.0119 11.0281C41.1335 11.353 41.1959 11.7012 41.1957 12.0528V32.1411C41.1958 32.4936 41.133 32.8425 41.0108 33.168C40.8887 33.4936 40.7096 33.7892 40.4838 34.038C40.258 34.2868 39.9901 34.4839 39.6952 34.618C39.4004 34.7521 39.0845 34.8205 38.7657 34.8193L19.4211 34.8203ZM18.6156 2.67818H2.43001C2.43001 2.67818 2.43001 9.37464 2.43001 22.7665H27.1746L18.6156 2.67818ZM25.2846 12.0528L30.1734 23.5356C30.2854 23.7988 30.3168 24.0951 30.2629 24.3798C30.2089 24.6644 30.0727 24.922 29.8746 25.1134L22.6089 32.1411H38.7657C38.7657 32.1411 38.7657 25.4447 38.7657 12.0528H25.2846ZM19.8972 31.205L25.8525 25.4447H17.91L19.8972 31.205Z"
+                fill="white" />
+            </svg> </a>E-Shop
+        </h1>
+        <ul class="nav-menu-list">
+          <li class="nav-menu-item">
+            <a href="#" class="menu-link">Men</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="menu-link">Women</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="menu-link">Kids</a>
+          </li>
+        </ul>
+        <ul class="nav-list">
+          <li class="nav-item-icon">
+            <button class="btn btn-icon">
+              <img src="./fashion_styles/image/search.png" alt="">
+            </button>
+          </li>
+          <li class="nav-item-icon">
+            <button class="btn btn-icon">
+              <a href="./cart.html">
+                <img src="./fashion_styles/image/cart.png" alt="">
+              </a>
+            </button>
+          </li>
+          <li class="nav-item-icon">
+            <button class="btn btn-icon">
+              <img src="./fashion_styles/image/avatar.png" alt="">
+            </button>
+          </li>
+        </ul>
+        <div class="toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section id="cart_items">
+      <div class="container">
+        <div class="row">
+          <div class="cart">
+            <div class="title-cart">
+              Cart Product
+            </div>
+            <div class="cart-content" id="show-cart">
+              <div class="show-content-card" id="content-cart"></div>
+              <div class="show-total" id="pay">
+                <div>
+                  <p class="total-product">Total:</p>
+                </div>
+                <button class="btn btn-primary btn-pay">Pay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-row">
+          <div class="info-brand col-6">
+            <a href="#" class="brand-name">
+              <svg width="42" height="35" viewBox="0 0 42 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.4211 35C19.1691 35.009 18.9208 34.9303 18.711 34.7749C18.5013 34.6194 18.3405 34.395 18.2511 34.133L15.3171 25.577H2.421C2.10292 25.577 1.78796 25.5074 1.49411 25.3721C1.20027 25.2368 0.933288 25.0385 0.708454 24.7885C0.48362 24.5385 0.305335 24.2417 0.183774 23.9151C0.0622137 23.5885 -0.000235823 23.2385 6.69174e-07 22.885V2.692C-0.000119585 2.33777 0.0627081 1.98703 0.184873 1.65984C0.307038 1.33265 0.48615 1.03546 0.711915 0.785355C0.937679 0.535248 1.20565 0.337114 1.50049 0.202347C1.79532 0.0675792 2.11121 -0.00116969 2.43001 1.50554e-05H19.3887C19.6186 4.3819e-06 19.8438 0.0726692 20.0379 0.209549C20.232 0.346429 20.387 0.541881 20.4849 0.773026L24.1479 9.42303H38.7747C39.0928 9.42303 39.4077 9.49267 39.7016 9.62798C39.9954 9.76329 40.2624 9.9616 40.4873 10.2116C40.7121 10.4616 40.8904 10.7584 41.0119 11.085C41.1335 11.4116 41.1959 11.7616 41.1957 12.115V32.307C41.1958 32.6613 41.133 33.012 41.0108 33.3392C40.8887 33.6664 40.7096 33.9636 40.4838 34.2137C40.258 34.4638 39.9901 34.6619 39.6952 34.7967C39.4004 34.9315 39.0845 35.0002 38.7657 34.999L19.4211 35ZM18.6156 2.692H2.43001C2.43001 2.692 2.43001 9.42302 2.43001 22.884H27.1746L18.6156 2.692ZM25.2846 12.115L30.1734 23.657C30.2854 23.9216 30.3168 24.2194 30.2629 24.5056C30.2089 24.7917 30.0727 25.0506 29.8746 25.243L22.6089 32.307H38.7657C38.7657 32.307 38.7657 25.576 38.7657 12.115H25.2846ZM19.8972 31.366L25.8525 25.576H17.91L19.8972 31.366Z"
+                  fill="white" />
+              </svg>
+              E-Shop
+            </a>
+            <p class="brand-title">
+              House My Brand designs clothing for the young, the old &everyone
+              in between - but most importantly, for the fashionable
+            </p>
+            <div class="brand-contact">
+              <ul class="contact-list">
+                <li class="contact-item">
+                  <a class="contact-item-link" href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="contact-item">
+                  <a class="contact-item-link" href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="contact-item">
+                  <a class="contact-item-link" href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li class="contact-item">
+                  <a class="contact-item-link" href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="contact-item">
+                  <a class="contact-item-link" href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="information-list col-6">
+            <li class="information-item">
+              <h5 class="list-title">Shopping online</h5>
+              <ul class="list-sub-info">
+                <li class="list-item">
+                  <a class="list-item-link" href="#">Order Status</a>
+                </li>
+                <li class="list-item">
+                  <a class="list-item-link" href="#">Shipping an Delivery</a>
+                </li>
+                <li class="list-item">
+                  <a class="list-item-link" href="#">Returns</a>
+                </li>
+                <li class="list-item">
+                  <a class="list-item-link" href="#">Payment Options</a>
+                </li>
+                <li class="list-item">
+                  <a class="list-item-link" href="#">Contact Us</a>
+                </li>
+              </ul>
+            </li>
+            <li class="information-item">
+              <h5 class="list-title">Information</h5>
+              <ul class="list-sub-info">
+                <li class="list-item">
+                  <a class="list-item-link" href="#">Git Cards</a>
+                </li>
+                <li class="list-item">
+                  <a class="list-item-link" href="#">Find a store</a>
+                </li>
+                <li class="list-item">
+                  <a class="list-item-link" href="#">Newsletter</a>
+                </li>
+                <li class="list-item">
+                  <a class="list-item-link" href="#">Become a member</a>
+                </li>
+                <li class="list-item">
+                  <a class="list-item-link" href="#">Site feedback</a>
+                </li>
+              </ul>
+            </li>
+            <li class="information-item">
+              <h5 class="list-title">Contact</h5>
+              <ul class="list-sub-info">
+                <li class="list-item">
+                  <a class="list-item-link" href="#">store@uilit.com</a>
+                </li>
+                <li class="list-item">Hotline: +1131 138 138</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="copyright txt-center">
+      DESIGN BY ICEO.CO - © 2019. ALL RIGHTS RESERVED.
+    </p>
+  </footer>
+</body>
+<script src="modules.js"></script>
+<script src="cart.js"></script>
+</html>
