@@ -72,18 +72,29 @@
 
     </div><!-- container -->
 <script>
-    var tabs = document.querySelectorAll('.tab-link') 
-    console.log(tabs);  
-    for(let i = 0; i < tabs.length; i++){
-        tabs[i].onclick = function(showTabs){
-           document.querySelector('.tab-link.current').classList.remove('current')
-           document.querySelector('.tab-content.current').classList.remove('current')
-           showTabs.target.classList.add('current')
-           document.getElementById(this.getAttribute('data-tab')).classList.add('current')
-        }        
-    }
+    // var tabs = document.querySelectorAll('.tab-link') 
+    // console.log(tabs);  
+    // for(let i = 0; i < tabs.length; i++){
+    //     tabs[i].onclick = function(showTabs){
+    //        document.querySelector('.tab-link.current').classList.remove('current')
+    //        document.querySelector('.tab-content.current').classList.remove('current')
+    //        showTabs.target.classList.add('current')
+    //        document.getElementById(this.getAttribute('data-tab')).classList.add('current')
+    //     }        
+    // }
     
-
+const obj = {
+    key1 : 'text',
+    key2: this,
+    foo: () => {
+        console.log(this)
+    },
+    foo2: function() {
+        console.log(this);
+    } 
+    
+}
+console.log(this);
 </script>
 </body>
 

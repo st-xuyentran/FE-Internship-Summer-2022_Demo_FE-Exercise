@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,83 +7,114 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <!-- <link rel="stylesheet" href="stylesheets/layout/_header.scss"> -->
   <link rel="stylesheet" href="fashion_styles/fashion_page.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<style>
+  .header {
+    top: 0;
+    background-color: black;
 
-  <style>
-    .header {
-      top: 0;
-      background-color: black;
+  }
+  .menu-link {
+    color: #fff;
+  }
+  .toggle {
+    display: none;
+  }
+  .main-content {
+    position: relative;
+    top: 200px;
+  }
+  .table-condensed {
+    width: 100%;
+  }
+  .table-responsive {
+    width: 100%;
+    height: 100%;
+  }
+  .table {
+    background-color: #fbb03b;
+    border: 1px solid #333;
+    color: #fff;
+  }
+  .cart_menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cart-link{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+  }
+  .cart-item {
+    width: 100%;
+    height: 200px;
+  }
+  .product-img{
+    width: 120px;
+    height: 200px;
+  }
+  .cart-item-link {
+    display: flex;
+    position: absolute;
+    height: 200px;
+    width: 25%;
+    flex-direction: column;
+  }
+  .badge {
+    height: 25px;
+  }
+  .title-cart {
+    font-size: 36px;
+    color: #333;
+    font-weight: 400;
+  }
+  .cart {
+    width: 100%;
+    height: 100%;
+  }
+  .cart-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+  }
+  .show-content-card {
+    width: 75%;
+  }
+  .cart-header {
+    width: 75%;
+    text-align: center;
+  }
+  .cart-item-product {
+    width: 100%;
+    display: flex;
+    border: 1px solid #D3D3D3;
+  }
 
-    }
+  .show-total {
+    width: 30%;
+    padding: 5px;
+    height: 213px;
+    border: 1px solid #D3D3D3;
+    background-color: #FFFFFF;
+  }
 
-
-    .menu-link {
-      color: #fff;
-    }
-
-    .toggle {
-      display: none;
-    }
-
-    .main-content {
-      position: relative;
-      top: 200px;
-    }
-
-    .table-condensed {
-      width: 100%;
-    }
-
-    .table-responsive {
-      width: 100%;
-      height: 100%;
-    }
-
-    .table {
-      background-color: #fbb03b;
-      border: 1px solid #333;
-      color: #fff;
-    }
-
-    .cart_menu {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .cart-item {
-      width: 100%;
-      height: 200px;
-    }
-
-    .cart-item-link {
-      display: flex;
-      position: absolute;
-      height: 200px;
-      width: 25%;
-      flex-direction: column;
-    }
-
-    .badge {
-      height: 25px;
-    }
-
-    .title-cart {
-      font-size: 36px;
-      color: #333;
-      font-weight: 400;
-    }
-
-    .cart {
-      width: 100%;
-      height: 500px;
-    }
-
-    .cart-content {
-      display: flex;
-    }
-  </style>
+  .total-product {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-light{
+    text-transform: none;
+    margin-left: 0px;
+    margin-top: 20px;
+    color: #fbb03b;
+  }
+  .btn-pay {
+    bottom: 0;
+  }
+</style>
 </head>
 
 <body>
@@ -111,17 +143,19 @@
         <ul class="nav-list">
           <li class="nav-item-icon">
             <button class="btn btn-icon">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <img src="./fashion_styles/image/search.png" alt="">
             </button>
           </li>
           <li class="nav-item-icon">
             <button class="btn btn-icon">
-              <i class="fa-solid fa-cart-shopping"></i>
+              <a href="./cart.html">
+                <img src="./fashion_styles/image/cart.png" alt="">
+              </a>
             </button>
           </li>
           <li class="nav-item-icon">
             <button class="btn btn-icon">
-              <i class="fa-solid fa-user"></i>
+              <img src="./fashion_styles/image/avatar.png" alt="">
             </button>
           </li>
         </ul>
@@ -131,7 +165,7 @@
       </div>
     </div>
   </header>
-  <main class="main-content">
+  <main class="main">
     <section id="cart_items">
       <div class="container">
         <div class="row">
@@ -140,6 +174,13 @@
               Cart Product
             </div>
             <div class="cart-content" id="show-cart">
+              <div class="show-content-card" id="content-cart"></div>
+              <div class="show-total" id="pay">
+                <div>
+                  <p class="total-product">Total:</p>
+                </div>
+                <button class="btn btn-primary btn-pay">Pay</button>
+              </div>
             </div>
           </div>
         </div>
@@ -252,52 +293,6 @@
     </p>
   </footer>
 </body>
-<script>
-  function fetchData() {
-    return localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
-  }
-  function render(cart) {
-    var showCart = document.getElementById('show-cart');
-    var quantity = 0;
-    showCart.innerHTML = '';
-    if (cart.length) {
-      var totalCart = 0;
-      showCart.innerHTML +=
-        '<ul id="list-cart"></ul>' +
-        '<div id="pay"></div>'
-      for (var item of cart) {
-        var discountProduct = (item.price - item.price * item.discount / 100).toFixed(2)
-        var showListCart = document.getElementById('list-cart')
-        showListCart.innerHTML += '<li>' +
-          '<div>' + viewProduct(item, discountPrice)
-        '</div>' +
-          '</li>'
-        totalPrice += item.discount > 0 ? discountPrice * item.number : item.price * item.number;
-        qtyCart += item.number;
-      }
-    }
-    else {
-      setEmptyCart(showCart);
-    }
-    titleQuantity.innerHTML = qtyCart > 1 ? "(" + qtyCart + " products)" : "(" + qtyCart + " product)";
-
-  }
-
-  function viewProduct(item, discountPrice) {
-    return
-    '<img class="product-img" src="' + image_url + '" alt="Loose Knit 3/4 Sleeve" />' +
-      '<h4 class="product-item-title">' + name + '</h4>' +
-      '<span class="product-price">' + price + '</span> '
-  }
-
-  function showPriceProduct(item, discountPrice) {
-    let showPrice = item.discount > 0 ? '<div class="cart-product-discount">' +
-      '<p class="new-price">$' + discountPrice + '</p>' +
-      '<p class="old-price">$' + item.price + '</p>' +
-      '</div>' +
-      '<span class="badge">-' + item.discount + '%</span>' : '<p class="product-price price">${item.price}</p>';
-    return showPrice;
-  }
-</script>
-
+<script src="modules.js"></script>
+<script src="cart.js"></script>
 </html>
