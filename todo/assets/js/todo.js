@@ -3,12 +3,12 @@ function showtTodoList() {
   var todoView = document.getElementById('todo-list')
   todoView.innerHTML = '';
   for (var item of todoData) {
-    console.log(item);
     todoView.innerHTML += '<li class="todo-item">' +
-      '<span class="content-todo">'+item.value+'</span>' +
-      '<i class=" btn-delete fa-solid fa-trash"></i>' +
+      '<p class="content-todo">'+item.value+'</p>' +
+      '<button data-id="' +item.id +'" class="btn js-btn-delete">X</button>' +
       '</li>'
   }
+  AddEventIntoBtnDelete();
 }
 
 function addEnventInToBtn() {
@@ -30,5 +30,22 @@ function addTodoList() {
   setLocalStorage('todolist', listTodo)
   showtTodoList()
 }
+function deleteTodo() {
+ var dataId = getLocalStorage('todolist')
+ for(var i = 0; i < dataId.length; i++) {
+   var dataIdElement = this.getAttribute('data-id')
+ 
+ }
+
+}
+function AddEventIntoBtnDelete() {
+  var listToDoBtn = document.querySelectorAll('.js-btn-delete')
+  for(var item of listToDoBtn){
+    item.addEventListener('click', deleteTodo);
+    var listId = item.getAttribute('data-id')
+    console.log(listId);
+  }
+}
+
 showtTodoList();
 addEnventInToBtn()
