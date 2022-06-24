@@ -30,21 +30,27 @@ function addTodoList() {
   setLocalStorage('todolist', listTodo)
   showtTodoList()
 }
-function deleteTodo() {
+function deleteTodo(listId) {
  var dataId = getLocalStorage('todolist')
  for(var i = 0; i < dataId.length; i++) {
-   var dataIdElement = this.getAttribute('data-id')
- 
- }
-
+   if(listId == dataId[i].id){
+     dataId.splice(i, 1);
+     break
+    }
+  }
+  console.log(dataId);
+console.log(listId);
+setLocalStorage('todolist',dataId );
+showtTodoList()
 }
 function AddEventIntoBtnDelete() {
   var listToDoBtn = document.querySelectorAll('.js-btn-delete')
-  for(var item of listToDoBtn){
-    item.addEventListener('click', deleteTodo);
+  listToDoBtn.forEach(function(item){
     var listId = item.getAttribute('data-id')
-    console.log(listId);
-  }
+    item.addEventListener('click', function(){
+      deleteTodo(listId)
+    });
+  })
 }
 
 showtTodoList();

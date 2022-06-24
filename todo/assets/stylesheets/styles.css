@@ -15,16 +15,16 @@
   width: 10%;
   height: 100%;
   color: #333;
+  cursor: pointer;
 
 }
 
 .btn-add {
   font-size: 20px;
   text-align: center;
-  cursor: pointer;
 }
-.btn-add:hover {
-  background-color: #ef7575;
+.btn:hover {
+  background-color: #fbb03b;
 }
 .section-content {
   width: 100%;
